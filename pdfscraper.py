@@ -43,7 +43,7 @@ def get_all_pdfs(cur_url):
 	new_links = [link['href'] for link in links if link['href'] not in visited_links]
 	print("{} pages visited".format(len(visited_links)))
 	## iterate
-	if len(new_links) == 0: 
+	if not new_links: 
 		print("End")
 		return 0
 	else:
